@@ -1,0 +1,25 @@
+# Dependencies and build outputs
+node_modules/
+.next/
+dist/
+build/
+coverage/
+target/
+.expo/
+*.tsbuildinfo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# OS/editor files
+.DS_Store
+.idea/
+*.swp
+
+# Python tooling
+__pycache__/
