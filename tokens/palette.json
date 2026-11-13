@@ -1,0 +1,764 @@
+{
+  "schemaVersion": "0.1.0",
+  "sourceRevision": "e9ad74f",
+  "stepRationale": [
+    {
+      "group": {
+        "zh-Hans": "背景",
+        "en-US": "Background"
+      },
+      "text": {
+        "zh-Hans": "应用底色。几乎白（黑），但不是纯白（纯黑）。",
+        "en-US": "App background. Almost white (black), but not pure white (pure black)."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "背景",
+        "en-US": "Background"
+      },
+      "text": {
+        "zh-Hans": "侧栏和条纹区域，比第 1 阶偏一点，用来划分区域。",
+        "en-US": "Sidebar and striped areas; slightly offset from step 1 to separate regions."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "组件",
+        "en-US": "Component"
+      },
+      "text": {
+        "zh-Hans": "组件的默认底色，也是悬停时的底色。",
+        "en-US": "Default component background, also used as the hover background."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "组件",
+        "en-US": "Component"
+      },
+      "text": {
+        "zh-Hans": "组件的悬停底色，比第 3 阶再偏一档。",
+        "en-US": "Component hover background, one notch further from step 3."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "组件",
+        "en-US": "Component"
+      },
+      "text": {
+        "zh-Hans": "组件按下或选中的底色。",
+        "en-US": "Component pressed or selected background."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "边框",
+        "en-US": "Border"
+      },
+      "text": {
+        "zh-Hans": "细边框和分割线。",
+        "en-US": "Subtle borders and dividers."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "边框",
+        "en-US": "Border"
+      },
+      "text": {
+        "zh-Hans": "控件边框和焦点环，比分割线明显。",
+        "en-US": "Control borders and focus rings; more visible than dividers."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "边框",
+        "en-US": "Border"
+      },
+      "text": {
+        "zh-Hans": "控件悬停时的边框。",
+        "en-US": "Control border on hover."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "实色",
+        "en-US": "Solid"
+      },
+      "text": {
+        "zh-Hans": "色阶里最“实”的一阶，做实色背景。中性灰里它被用作提示文字，对比度偏低。",
+        "en-US": "The most solid step of the scale, used for solid backgrounds. In neutral gray it doubles as hint text, where its contrast is low."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "实色",
+        "en-US": "Solid"
+      },
+      "text": {
+        "zh-Hans": "实色背景悬停时的颜色。",
+        "en-US": "Color of a solid background on hover."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "文字",
+        "en-US": "Text"
+      },
+      "text": {
+        "zh-Hans": "低对比文字（二级文字），压在第 2 阶底上仍保证可读。",
+        "en-US": "Low-contrast (secondary) text; stays readable on a step 2 background."
+      }
+    },
+    {
+      "group": {
+        "zh-Hans": "文字",
+        "en-US": "Text"
+      },
+      "text": {
+        "zh-Hans": "高对比文字：标题、正文、图标。",
+        "en-US": "High-contrast text: headings, body text, icons."
+      }
+    }
+  ],
+  "themes": {
+    "neutral": {
+      "name": {
+        "zh-Hans": "中性（灰）",
+        "en-US": "Neutral (gray)"
+      },
+      "modes": {
+        "light": {
+          "steps": [
+            "#fcfcfc",
+            "#f9f9f9",
+            "#f0f0f0",
+            "#e8e8e8",
+            "#e0e0e0",
+            "#d9d9d9",
+            "#cecece",
+            "#bbbbbb",
+            "#8d8d8d",
+            "#838383",
+            "#646464",
+            "#202020"
+          ],
+          "roles": {
+            "bg.app": {
+              "value": "#fcfcfc",
+              "rationale": {
+                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+              },
+              "source": "radix:gray-1",
+              "verified": true
+            },
+            "bg.sidebar": {
+              "value": "#f9f9f9",
+              "rationale": {
+                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+              },
+              "source": "radix:gray-2",
+              "verified": true
+            },
+            "bg.surface": {
+              "value": "#ffffff",
+              "rationale": {
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "bg.hover": {
+              "value": "#f0f0f0",
+              "rationale": {
+                "zh-Hans": "悬停只比当前底色偏一档，变化小到不抢眼，又大到能被感知。深色多偏一阶，因为暗底上相邻灰更难分辨。",
+                "en-US": "Hover is only one notch off the current background: small enough not to distract, large enough to notice. Dark mode shifts one step more because adjacent grays are harder to tell apart on dark backgrounds."
+              },
+              "source": "radix:gray-3",
+              "verified": true
+            },
+            "bg.active": {
+              "value": "#e8e8e8",
+              "rationale": {
+                "zh-Hans": "选中比悬停再偏一档，两种状态一眼能分开。",
+                "en-US": "Selected is one more notch beyond hover, so the two states are distinguishable at a glance."
+              },
+              "source": "radix:gray-4",
+              "verified": true
+            },
+            "border.subtle": {
+              "value": "#e0e0e0",
+              "rationale": {
+                "zh-Hans": "分割线要看得见但不抢内容。Radix 把第 6 阶定为细边框；浅色用 5，深色用 6 是我们的判断：暗底上线条要多一档才看得清。",
+                "en-US": "Dividers should be visible without competing with content. Radix defines step 6 as the subtle border; using 5 in light mode and 6 in dark mode is our own judgment: lines need one more notch to be seen on dark backgrounds."
+              },
+              "source": "radix:gray-5",
+              "verified": true
+            },
+            "border.strong": {
+              "value": "#cecece",
+              "rationale": {
+                "zh-Hans": "输入框边框和焦点环。Radix 把第 7 阶定为控件边框和焦点环，比分割线明显，用来告诉用户“这里可以输入”。",
+                "en-US": "Input border and focus ring. Radix defines step 7 as the control border and focus ring; it is more visible than a divider and tells users \"you can type here\"."
+              },
+              "source": "radix:gray-7",
+              "verified": true
+            },
+            "text.primary": {
+              "value": "#202020",
+              "rationale": {
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+              },
+              "source": "radix:gray-12",
+              "verified": true
+            },
+            "text.secondary": {
+              "value": "#646464",
+              "rationale": {
+                "zh-Hans": "说明文字。第 11 阶是 Radix 的低对比文字，仍满足 4.5:1，可承载信息。",
+                "en-US": "Supporting text. Step 11 is Radix's low-contrast text, which still meets 4.5:1 and can carry information."
+              },
+              "source": "radix:gray-11",
+              "verified": true
+            },
+            "text.tertiary": {
+              "value": "#8d8d8d",
+              "rationale": {
+                "zh-Hans": "时间戳、占位符。第 9 阶对比度低于 4.5:1，所以只能用在“少了也不影响理解”的位置。这是已知限制，不是疏忽。",
+                "en-US": "Timestamps and placeholders. Step 9 contrast is below 4.5:1, so it may only be used where losing it does not hurt understanding. This is a known limitation, not an oversight."
+              },
+              "source": "radix:gray-9",
+              "verified": true
+            }
+          },
+          "accent": {
+            "value": "#0b68cb",
+            "rationale": {
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+            },
+            "source": "own",
+            "verified": false
+          },
+          "status": {
+            "running": {
+              "value": "#0b68cb",
+              "rationale": {
+                "zh-Hans": "运行中。与强调色同色相，但只用在小标签上，不做大面积填充，避免和主按钮混淆。",
+                "en-US": "Running. Same hue as the accent, but only used on small labels and never as a large fill, to avoid confusion with the primary button."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "success": {
+              "value": "#1a7f37",
+              "rationale": {
+                "zh-Hans": "成功。浅色取深一档的绿，保证文字对比度；深色取亮绿。永远配对勾图标和文字，不单靠颜色。",
+                "en-US": "Success. Light mode uses a darker green to keep text contrast; dark mode uses a bright green. Always paired with a check icon and text, never color alone."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "warning": {
+              "value": "#8a5a00",
+              "rationale": {
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "error": {
+              "value": "#c62828",
+              "rationale": {
+                "zh-Hans": "失败。浅色取偏深的红，深色取偏粉的亮红，避免暗底上红色发闷。配叉号图标。",
+                "en-US": "Failure. Light mode uses a deeper red; dark mode uses a pinkish bright red so the red does not look dull on dark backgrounds. Paired with a cross icon."
+              },
+              "source": "own",
+              "verified": false
+            }
+          }
+        },
+        "dark": {
+          "steps": [
+            "#111111",
+            "#191919",
+            "#222222",
+            "#2a2a2a",
+            "#313131",
+            "#3a3a3a",
+            "#484848",
+            "#606060",
+            "#6e6e6e",
+            "#7b7b7b",
+            "#b4b4b4",
+            "#eeeeee"
+          ],
+          "roles": {
+            "bg.app": {
+              "value": "#111111",
+              "rationale": {
+                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+              },
+              "source": "radix:gray-1",
+              "verified": true
+            },
+            "bg.sidebar": {
+              "value": "#191919",
+              "rationale": {
+                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+              },
+              "source": "radix:gray-2",
+              "verified": true
+            },
+            "bg.surface": {
+              "value": "#222222",
+              "rationale": {
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+              },
+              "source": "radix:gray-3",
+              "verified": true
+            },
+            "bg.hover": {
+              "value": "#2a2a2a",
+              "rationale": {
+                "zh-Hans": "悬停只比当前底色偏一档，变化小到不抢眼，又大到能被感知。深色多偏一阶，因为暗底上相邻灰更难分辨。",
+                "en-US": "Hover is only one notch off the current background: small enough not to distract, large enough to notice. Dark mode shifts one step more because adjacent grays are harder to tell apart on dark backgrounds."
+              },
+              "source": "radix:gray-4",
+              "verified": true
+            },
+            "bg.active": {
+              "value": "#313131",
+              "rationale": {
+                "zh-Hans": "选中比悬停再偏一档，两种状态一眼能分开。",
+                "en-US": "Selected is one more notch beyond hover, so the two states are distinguishable at a glance."
+              },
+              "source": "radix:gray-5",
+              "verified": true
+            },
+            "border.subtle": {
+              "value": "#3a3a3a",
+              "rationale": {
+                "zh-Hans": "分割线要看得见但不抢内容。Radix 把第 6 阶定为细边框；浅色用 5，深色用 6 是我们的判断：暗底上线条要多一档才看得清。",
+                "en-US": "Dividers should be visible without competing with content. Radix defines step 6 as the subtle border; using 5 in light mode and 6 in dark mode is our own judgment: lines need one more notch to be seen on dark backgrounds."
+              },
+              "source": "radix:gray-6",
+              "verified": true
+            },
+            "border.strong": {
+              "value": "#484848",
+              "rationale": {
+                "zh-Hans": "输入框边框和焦点环。Radix 把第 7 阶定为控件边框和焦点环，比分割线明显，用来告诉用户“这里可以输入”。",
+                "en-US": "Input border and focus ring. Radix defines step 7 as the control border and focus ring; it is more visible than a divider and tells users \"you can type here\"."
+              },
+              "source": "radix:gray-7",
+              "verified": true
+            },
+            "text.primary": {
+              "value": "#eeeeee",
+              "rationale": {
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+              },
+              "source": "radix:gray-12",
+              "verified": true
+            },
+            "text.secondary": {
+              "value": "#b4b4b4",
+              "rationale": {
+                "zh-Hans": "说明文字。第 11 阶是 Radix 的低对比文字，仍满足 4.5:1，可承载信息。",
+                "en-US": "Supporting text. Step 11 is Radix's low-contrast text, which still meets 4.5:1 and can carry information."
+              },
+              "source": "radix:gray-11",
+              "verified": true
+            },
+            "text.tertiary": {
+              "value": "#6e6e6e",
+              "rationale": {
+                "zh-Hans": "时间戳、占位符。第 9 阶对比度低于 4.5:1，所以只能用在“少了也不影响理解”的位置。这是已知限制，不是疏忽。",
+                "en-US": "Timestamps and placeholders. Step 9 contrast is below 4.5:1, so it may only be used where losing it does not hurt understanding. This is a known limitation, not an oversight."
+              },
+              "source": "radix:gray-9",
+              "verified": true
+            }
+          },
+          "accent": {
+            "value": "#4c9aff",
+            "rationale": {
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+            },
+            "source": "own",
+            "verified": false
+          },
+          "status": {
+            "running": {
+              "value": "#6cb0ff",
+              "rationale": {
+                "zh-Hans": "运行中。与强调色同色相，但只用在小标签上，不做大面积填充，避免和主按钮混淆。",
+                "en-US": "Running. Same hue as the accent, but only used on small labels and never as a large fill, to avoid confusion with the primary button."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "success": {
+              "value": "#56d364",
+              "rationale": {
+                "zh-Hans": "成功。浅色取深一档的绿，保证文字对比度；深色取亮绿。永远配对勾图标和文字，不单靠颜色。",
+                "en-US": "Success. Light mode uses a darker green to keep text contrast; dark mode uses a bright green. Always paired with a check icon and text, never color alone."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "warning": {
+              "value": "#e3b341",
+              "rationale": {
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "error": {
+              "value": "#ff8a80",
+              "rationale": {
+                "zh-Hans": "失败。浅色取偏深的红，深色取偏粉的亮红，避免暗底上红色发闷。配叉号图标。",
+                "en-US": "Failure. Light mode uses a deeper red; dark mode uses a pinkish bright red so the red does not look dull on dark backgrounds. Paired with a cross icon."
+              },
+              "source": "own",
+              "verified": false
+            }
+          }
+        }
+      }
+    },
+    "slate": {
+      "name": {
+        "zh-Hans": "石板（偏蓝灰）",
+        "en-US": "Slate (blue-tinted gray)"
+      },
+      "modes": {
+        "light": {
+          "steps": [
+            "#fcfcfd",
+            "#f9f9fb",
+            "#f0f0f3",
+            "#e8e8ec",
+            "#e0e1e6",
+            "#d9d9e0",
+            "#cdced6",
+            "#b9bbc6",
+            "#8b8d98",
+            "#80838d",
+            "#60646c",
+            "#1c2024"
+          ],
+          "roles": {
+            "bg.app": {
+              "value": "#fcfcfd",
+              "rationale": {
+                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+              },
+              "source": "radix:slate-1",
+              "verified": true
+            },
+            "bg.sidebar": {
+              "value": "#f9f9fb",
+              "rationale": {
+                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+              },
+              "source": "radix:slate-2",
+              "verified": true
+            },
+            "bg.surface": {
+              "value": "#ffffff",
+              "rationale": {
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "bg.hover": {
+              "value": "#f0f0f3",
+              "rationale": {
+                "zh-Hans": "悬停只比当前底色偏一档，变化小到不抢眼，又大到能被感知。深色多偏一阶，因为暗底上相邻灰更难分辨。",
+                "en-US": "Hover is only one notch off the current background: small enough not to distract, large enough to notice. Dark mode shifts one step more because adjacent grays are harder to tell apart on dark backgrounds."
+              },
+              "source": "radix:slate-3",
+              "verified": true
+            },
+            "bg.active": {
+              "value": "#e8e8ec",
+              "rationale": {
+                "zh-Hans": "选中比悬停再偏一档，两种状态一眼能分开。",
+                "en-US": "Selected is one more notch beyond hover, so the two states are distinguishable at a glance."
+              },
+              "source": "radix:slate-4",
+              "verified": true
+            },
+            "border.subtle": {
+              "value": "#e0e1e6",
+              "rationale": {
+                "zh-Hans": "分割线要看得见但不抢内容。Radix 把第 6 阶定为细边框；浅色用 5，深色用 6 是我们的判断：暗底上线条要多一档才看得清。",
+                "en-US": "Dividers should be visible without competing with content. Radix defines step 6 as the subtle border; using 5 in light mode and 6 in dark mode is our own judgment: lines need one more notch to be seen on dark backgrounds."
+              },
+              "source": "radix:slate-5",
+              "verified": true
+            },
+            "border.strong": {
+              "value": "#cdced6",
+              "rationale": {
+                "zh-Hans": "输入框边框和焦点环。Radix 把第 7 阶定为控件边框和焦点环，比分割线明显，用来告诉用户“这里可以输入”。",
+                "en-US": "Input border and focus ring. Radix defines step 7 as the control border and focus ring; it is more visible than a divider and tells users \"you can type here\"."
+              },
+              "source": "radix:slate-7",
+              "verified": true
+            },
+            "text.primary": {
+              "value": "#1c2024",
+              "rationale": {
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+              },
+              "source": "radix:slate-12",
+              "verified": true
+            },
+            "text.secondary": {
+              "value": "#60646c",
+              "rationale": {
+                "zh-Hans": "说明文字。第 11 阶是 Radix 的低对比文字，仍满足 4.5:1，可承载信息。",
+                "en-US": "Supporting text. Step 11 is Radix's low-contrast text, which still meets 4.5:1 and can carry information."
+              },
+              "source": "radix:slate-11",
+              "verified": true
+            },
+            "text.tertiary": {
+              "value": "#8b8d98",
+              "rationale": {
+                "zh-Hans": "时间戳、占位符。第 9 阶对比度低于 4.5:1，所以只能用在“少了也不影响理解”的位置。这是已知限制，不是疏忽。",
+                "en-US": "Timestamps and placeholders. Step 9 contrast is below 4.5:1, so it may only be used where losing it does not hurt understanding. This is a known limitation, not an oversight."
+              },
+              "source": "radix:slate-9",
+              "verified": true
+            }
+          },
+          "accent": {
+            "value": "#0b68cb",
+            "rationale": {
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+            },
+            "source": "own",
+            "verified": false
+          },
+          "status": {
+            "running": {
+              "value": "#0b68cb",
+              "rationale": {
+                "zh-Hans": "运行中。与强调色同色相，但只用在小标签上，不做大面积填充，避免和主按钮混淆。",
+                "en-US": "Running. Same hue as the accent, but only used on small labels and never as a large fill, to avoid confusion with the primary button."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "success": {
+              "value": "#1a7f37",
+              "rationale": {
+                "zh-Hans": "成功。浅色取深一档的绿，保证文字对比度；深色取亮绿。永远配对勾图标和文字，不单靠颜色。",
+                "en-US": "Success. Light mode uses a darker green to keep text contrast; dark mode uses a bright green. Always paired with a check icon and text, never color alone."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "warning": {
+              "value": "#8a5a00",
+              "rationale": {
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "error": {
+              "value": "#c62828",
+              "rationale": {
+                "zh-Hans": "失败。浅色取偏深的红，深色取偏粉的亮红，避免暗底上红色发闷。配叉号图标。",
+                "en-US": "Failure. Light mode uses a deeper red; dark mode uses a pinkish bright red so the red does not look dull on dark backgrounds. Paired with a cross icon."
+              },
+              "source": "own",
+              "verified": false
+            }
+          }
+        },
+        "dark": {
+          "steps": [
+            "#111113",
+            "#18191b",
+            "#212225",
+            "#272a2d",
+            "#2e3135",
+            "#363a3f",
+            "#43484e",
+            "#5a6169",
+            "#696e77",
+            "#777b84",
+            "#b0b4ba",
+            "#edeef0"
+          ],
+          "roles": {
+            "bg.app": {
+              "value": "#111113",
+              "rationale": {
+                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+              },
+              "source": "radix:slate-1",
+              "verified": true
+            },
+            "bg.sidebar": {
+              "value": "#18191b",
+              "rationale": {
+                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+              },
+              "source": "radix:slate-2",
+              "verified": true
+            },
+            "bg.surface": {
+              "value": "#212225",
+              "rationale": {
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+              },
+              "source": "radix:slate-3",
+              "verified": true
+            },
+            "bg.hover": {
+              "value": "#272a2d",
+              "rationale": {
+                "zh-Hans": "悬停只比当前底色偏一档，变化小到不抢眼，又大到能被感知。深色多偏一阶，因为暗底上相邻灰更难分辨。",
+                "en-US": "Hover is only one notch off the current background: small enough not to distract, large enough to notice. Dark mode shifts one step more because adjacent grays are harder to tell apart on dark backgrounds."
+              },
+              "source": "radix:slate-4",
+              "verified": true
+            },
+            "bg.active": {
+              "value": "#2e3135",
+              "rationale": {
+                "zh-Hans": "选中比悬停再偏一档，两种状态一眼能分开。",
+                "en-US": "Selected is one more notch beyond hover, so the two states are distinguishable at a glance."
+              },
+              "source": "radix:slate-5",
+              "verified": true
+            },
+            "border.subtle": {
+              "value": "#363a3f",
+              "rationale": {
+                "zh-Hans": "分割线要看得见但不抢内容。Radix 把第 6 阶定为细边框；浅色用 5，深色用 6 是我们的判断：暗底上线条要多一档才看得清。",
+                "en-US": "Dividers should be visible without competing with content. Radix defines step 6 as the subtle border; using 5 in light mode and 6 in dark mode is our own judgment: lines need one more notch to be seen on dark backgrounds."
+              },
+              "source": "radix:slate-6",
+              "verified": true
+            },
+            "border.strong": {
+              "value": "#43484e",
+              "rationale": {
+                "zh-Hans": "输入框边框和焦点环。Radix 把第 7 阶定为控件边框和焦点环，比分割线明显，用来告诉用户“这里可以输入”。",
+                "en-US": "Input border and focus ring. Radix defines step 7 as the control border and focus ring; it is more visible than a divider and tells users \"you can type here\"."
+              },
+              "source": "radix:slate-7",
+              "verified": true
+            },
+            "text.primary": {
+              "value": "#edeef0",
+              "rationale": {
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+              },
+              "source": "radix:slate-12",
+              "verified": true
+            },
+            "text.secondary": {
+              "value": "#b0b4ba",
+              "rationale": {
+                "zh-Hans": "说明文字。第 11 阶是 Radix 的低对比文字，仍满足 4.5:1，可承载信息。",
+                "en-US": "Supporting text. Step 11 is Radix's low-contrast text, which still meets 4.5:1 and can carry information."
+              },
+              "source": "radix:slate-11",
+              "verified": true
+            },
+            "text.tertiary": {
+              "value": "#696e77",
+              "rationale": {
+                "zh-Hans": "时间戳、占位符。第 9 阶对比度低于 4.5:1，所以只能用在“少了也不影响理解”的位置。这是已知限制，不是疏忽。",
+                "en-US": "Timestamps and placeholders. Step 9 contrast is below 4.5:1, so it may only be used where losing it does not hurt understanding. This is a known limitation, not an oversight."
+              },
+              "source": "radix:slate-9",
+              "verified": true
+            }
+          },
+          "accent": {
+            "value": "#4c9aff",
+            "rationale": {
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+            },
+            "source": "own",
+            "verified": false
+          },
+          "status": {
+            "running": {
+              "value": "#6cb0ff",
+              "rationale": {
+                "zh-Hans": "运行中。与强调色同色相，但只用在小标签上，不做大面积填充，避免和主按钮混淆。",
+                "en-US": "Running. Same hue as the accent, but only used on small labels and never as a large fill, to avoid confusion with the primary button."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "success": {
+              "value": "#56d364",
+              "rationale": {
+                "zh-Hans": "成功。浅色取深一档的绿，保证文字对比度；深色取亮绿。永远配对勾图标和文字，不单靠颜色。",
+                "en-US": "Success. Light mode uses a darker green to keep text contrast; dark mode uses a bright green. Always paired with a check icon and text, never color alone."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "warning": {
+              "value": "#e3b341",
+              "rationale": {
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+              },
+              "source": "own",
+              "verified": false
+            },
+            "error": {
+              "value": "#ff8a80",
+              "rationale": {
+                "zh-Hans": "失败。浅色取偏深的红，深色取偏粉的亮红，避免暗底上红色发闷。配叉号图标。",
+                "en-US": "Failure. Light mode uses a deeper red; dark mode uses a pinkish bright red so the red does not look dull on dark backgrounds. Paired with a cross icon."
+              },
+              "source": "own",
+              "verified": false
+            }
+          }
+        }
+      }
+    }
+  }
+}
