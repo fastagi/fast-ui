@@ -8,8 +8,8 @@
         "en-US": "Background"
       },
       "text": {
-        "zh-Hans": "应用底色。几乎白（黑），但不是纯白（纯黑）。",
-        "en-US": "App background. Almost white (black), but not pure white (pure black)."
+        "zh-Hans": "应用底色。浅色模式几乎是白色但不是纯白，深色模式几乎是黑色但不是纯黑。",
+        "en-US": "App background. Light mode: almost white, never pure white. Dark mode: almost black, never pure black."
       }
     },
     {
@@ -88,8 +88,8 @@
         "en-US": "Solid"
       },
       "text": {
-        "zh-Hans": "色阶里最“实”的一阶，做实色背景。中性灰里它被用作提示文字，对比度偏低。",
-        "en-US": "The most solid step of the scale, used for solid backgrounds. In neutral gray it doubles as hint text, where its contrast is low."
+        "zh-Hans": "色阶里最“实”的一阶，做实色背景。两个主题都把它用作三级文字（提示文字），此处对比度偏低。",
+        "en-US": "The most solid step of the scale, used for solid backgrounds. It doubles as tertiary text (hint text), where its contrast is low."
       }
     },
     {
@@ -149,8 +149,8 @@
             "bg.app": {
               "value": "#fcfcfc",
               "rationale": {
-                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
-                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+                "zh-Hans": "窗口最底层，取第 1 阶（浅色里最浅，深色里最深）。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, step 1 (the lightest in light mode, the darkest in dark mode). Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
               },
               "source": "radix:gray-1",
               "verified": true
@@ -158,8 +158,8 @@
             "bg.sidebar": {
               "value": "#f9f9f9",
               "rationale": {
-                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
-                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+                "zh-Hans": "只比窗口底偏一点点：浅色略深，深色略亮，侧栏就成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly different from the window background — a touch darker in light mode, a touch lighter in dark mode, so the sidebar reads as its own region without needing a border."
               },
               "source": "radix:gray-2",
               "verified": true
@@ -167,8 +167,8 @@
             "bg.surface": {
               "value": "#ffffff",
               "rationale": {
-                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
-                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白，深色取第 3 阶。两种模式下它都比窗口底更亮，方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode, step 3 in dark mode. In both modes the surface is brighter than the window background, so hierarchy does not rely on shadows."
               },
               "source": "own",
               "verified": false
@@ -212,8 +212,8 @@
             "text.primary": {
               "value": "#202020",
               "rationale": {
-                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
-                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用第 12 阶的值，而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using the step 12 value instead of pure black or white reduces glare and halation during long reading."
               },
               "source": "radix:gray-12",
               "verified": true
@@ -240,8 +240,8 @@
           "accent": {
             "value": "#0b68cb",
             "rationale": {
-              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
-              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色取能与白字达到 4.5:1 的蓝，深色取更亮的蓝并配深色字，同样需达到 4.5:1。待对照参考应用校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light mode uses a blue that reaches 4.5:1 with white text; dark mode uses a lighter blue with dark text, which must also reach 4.5:1. Pending calibration against a reference application."
             },
             "source": "own",
             "verified": false
@@ -268,8 +268,8 @@
             "warning": {
               "value": "#8a5a00",
               "rationale": {
-                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
-                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色的琥珀必须取得更暗才能达到对比度；深色取更亮的琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so the amber must be darker in light mode to reach the contrast and lighter in dark mode. Paired with a triangle icon."
               },
               "source": "own",
               "verified": false
@@ -304,8 +304,8 @@
             "bg.app": {
               "value": "#111111",
               "rationale": {
-                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
-                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+                "zh-Hans": "窗口最底层，取第 1 阶（浅色里最浅，深色里最深）。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, step 1 (the lightest in light mode, the darkest in dark mode). Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
               },
               "source": "radix:gray-1",
               "verified": true
@@ -313,8 +313,8 @@
             "bg.sidebar": {
               "value": "#191919",
               "rationale": {
-                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
-                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+                "zh-Hans": "只比窗口底偏一点点：浅色略深，深色略亮，侧栏就成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly different from the window background — a touch darker in light mode, a touch lighter in dark mode, so the sidebar reads as its own region without needing a border."
               },
               "source": "radix:gray-2",
               "verified": true
@@ -322,8 +322,8 @@
             "bg.surface": {
               "value": "#222222",
               "rationale": {
-                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
-                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白，深色取第 3 阶。两种模式下它都比窗口底更亮，方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode, step 3 in dark mode. In both modes the surface is brighter than the window background, so hierarchy does not rely on shadows."
               },
               "source": "radix:gray-3",
               "verified": true
@@ -367,8 +367,8 @@
             "text.primary": {
               "value": "#eeeeee",
               "rationale": {
-                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
-                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用第 12 阶的值，而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using the step 12 value instead of pure black or white reduces glare and halation during long reading."
               },
               "source": "radix:gray-12",
               "verified": true
@@ -395,8 +395,8 @@
           "accent": {
             "value": "#4c9aff",
             "rationale": {
-              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
-              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色取能与白字达到 4.5:1 的蓝，深色取更亮的蓝并配深色字，同样需达到 4.5:1。待对照参考应用校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light mode uses a blue that reaches 4.5:1 with white text; dark mode uses a lighter blue with dark text, which must also reach 4.5:1. Pending calibration against a reference application."
             },
             "source": "own",
             "verified": false
@@ -423,8 +423,8 @@
             "warning": {
               "value": "#e3b341",
               "rationale": {
-                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
-                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色的琥珀必须取得更暗才能达到对比度；深色取更亮的琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so the amber must be darker in light mode to reach the contrast and lighter in dark mode. Paired with a triangle icon."
               },
               "source": "own",
               "verified": false
@@ -444,7 +444,7 @@
     },
     "slate": {
       "name": {
-        "zh-Hans": "石板（偏蓝灰）",
+        "zh-Hans": "板岩（偏蓝灰）",
         "en-US": "Slate (blue-tinted gray)"
       },
       "modes": {
@@ -467,8 +467,8 @@
             "bg.app": {
               "value": "#fcfcfd",
               "rationale": {
-                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
-                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+                "zh-Hans": "窗口最底层，取第 1 阶（浅色里最浅，深色里最深）。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, step 1 (the lightest in light mode, the darkest in dark mode). Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
               },
               "source": "radix:slate-1",
               "verified": true
@@ -476,8 +476,8 @@
             "bg.sidebar": {
               "value": "#f9f9fb",
               "rationale": {
-                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
-                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+                "zh-Hans": "只比窗口底偏一点点：浅色略深，深色略亮，侧栏就成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly different from the window background — a touch darker in light mode, a touch lighter in dark mode, so the sidebar reads as its own region without needing a border."
               },
               "source": "radix:slate-2",
               "verified": true
@@ -485,8 +485,8 @@
             "bg.surface": {
               "value": "#ffffff",
               "rationale": {
-                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
-                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白，深色取第 3 阶。两种模式下它都比窗口底更亮，方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode, step 3 in dark mode. In both modes the surface is brighter than the window background, so hierarchy does not rely on shadows."
               },
               "source": "own",
               "verified": false
@@ -530,8 +530,8 @@
             "text.primary": {
               "value": "#1c2024",
               "rationale": {
-                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
-                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用第 12 阶的值，而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using the step 12 value instead of pure black or white reduces glare and halation during long reading."
               },
               "source": "radix:slate-12",
               "verified": true
@@ -558,8 +558,8 @@
           "accent": {
             "value": "#0b68cb",
             "rationale": {
-              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
-              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色取能与白字达到 4.5:1 的蓝，深色取更亮的蓝并配深色字，同样需达到 4.5:1。待对照参考应用校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light mode uses a blue that reaches 4.5:1 with white text; dark mode uses a lighter blue with dark text, which must also reach 4.5:1. Pending calibration against a reference application."
             },
             "source": "own",
             "verified": false
@@ -586,8 +586,8 @@
             "warning": {
               "value": "#8a5a00",
               "rationale": {
-                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
-                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色的琥珀必须取得更暗才能达到对比度；深色取更亮的琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so the amber must be darker in light mode to reach the contrast and lighter in dark mode. Paired with a triangle icon."
               },
               "source": "own",
               "verified": false
@@ -622,8 +622,8 @@
             "bg.app": {
               "value": "#111113",
               "rationale": {
-                "zh-Hans": "窗口最底层，取最浅的一阶。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
-                "en-US": "Lowest window layer, the lightest step. Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
+                "zh-Hans": "窗口最底层，取第 1 阶（浅色里最浅，深色里最深）。浅色不用纯白，把白留给“浮起来”的卡片；深色不用纯黑，避免和屏幕边缘糊成一片。",
+                "en-US": "Lowest window layer, step 1 (the lightest in light mode, the darkest in dark mode). Light mode avoids pure white so white can be kept for raised cards; dark mode avoids pure black so the window does not blur into the screen edge."
               },
               "source": "radix:slate-1",
               "verified": true
@@ -631,8 +631,8 @@
             "bg.sidebar": {
               "value": "#18191b",
               "rationale": {
-                "zh-Hans": "只比窗口底深（亮）一点点，侧栏成为独立区域，不需要再画边框。",
-                "en-US": "Only slightly darker (lighter) than the window background, so the sidebar reads as its own region without needing a border."
+                "zh-Hans": "只比窗口底偏一点点：浅色略深，深色略亮，侧栏就成为独立区域，不需要再画边框。",
+                "en-US": "Only slightly different from the window background — a touch darker in light mode, a touch lighter in dark mode, so the sidebar reads as its own region without needing a border."
               },
               "source": "radix:slate-2",
               "verified": true
@@ -640,8 +640,8 @@
             "bg.surface": {
               "value": "#212225",
               "rationale": {
-                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白（更亮），深色取第 3 阶（更亮）。两个主题方向一致，层级不靠阴影。",
-                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode (brighter), step 3 in dark mode (brighter). Both modes go the same direction, so hierarchy does not rely on shadows."
+                "zh-Hans": "卡片和输入框要比窗口底更靠近光源：浅色用纯白，深色取第 3 阶。两种模式下它都比窗口底更亮，方向一致，层级不靠阴影。",
+                "en-US": "Cards and inputs sit closer to the light than the window background: pure white in light mode, step 3 in dark mode. In both modes the surface is brighter than the window background, so hierarchy does not rely on shadows."
               },
               "source": "radix:slate-3",
               "verified": true
@@ -685,8 +685,8 @@
             "text.primary": {
               "value": "#edeef0",
               "rationale": {
-                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用 #202020 / #eee 而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
-                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using #202020 / #eee instead of pure black or white reduces glare and halation during long reading."
+                "zh-Hans": "标题和正文。Radix 保证第 12 阶压在第 2 阶底上对比度足够。用第 12 阶的值，而不是纯黑纯白，减少长时间阅读的刺眼和发光。",
+                "en-US": "Headings and body text. Radix designs step 12 to have sufficient contrast on a step 2 background. Using the step 12 value instead of pure black or white reduces glare and halation during long reading."
               },
               "source": "radix:slate-12",
               "verified": true
@@ -713,8 +713,8 @@
           "accent": {
             "value": "#4c9aff",
             "rationale": {
-              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色 #0b68cb 配白字、深色 #4c9aff 配深色字，都需 ≥4.5:1。待 Codex 实测后校准。",
-              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light #0b68cb with white text and dark #4c9aff with dark text each need to reach at least 4.5:1. To be calibrated after Codex measurement."
+              "zh-Hans": "表示“可以点”：主按钮、选中项。选蓝色是因为它与状态色里的红、绿、琥珀都不冲突。浅色取能与白字达到 4.5:1 的蓝，深色取更亮的蓝并配深色字，同样需达到 4.5:1。待对照参考应用校准。",
+              "en-US": "Signals \"can be clicked\": primary buttons, selected items. Blue was chosen because it does not clash with the red, green and amber status colors. Light mode uses a blue that reaches 4.5:1 with white text; dark mode uses a lighter blue with dark text, which must also reach 4.5:1. Pending calibration against a reference application."
             },
             "source": "own",
             "verified": false
@@ -741,8 +741,8 @@
             "warning": {
               "value": "#e3b341",
               "rationale": {
-                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色取偏暗的琥珀 #8a5a00；深色取亮琥珀。配三角图标。",
-                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so light mode uses a darker amber #8a5a00; dark mode uses a bright amber. Paired with a triangle icon."
+                "zh-Hans": "需要确认。黄色在浅底上很难达到对比度，所以浅色的琥珀必须取得更暗才能达到对比度；深色取更亮的琥珀。配三角图标。",
+                "en-US": "Needs confirmation. Yellow struggles to reach contrast on light backgrounds, so the amber must be darker in light mode to reach the contrast and lighter in dark mode. Paired with a triangle icon."
               },
               "source": "own",
               "verified": false

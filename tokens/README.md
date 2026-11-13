@@ -17,6 +17,6 @@ data file only: no package, generator, or platform consumer exists in this repos
 - The values are a proposal. `verified: true` means only that the value is exactly the
   published Radix value for the cited step; it does not mean contrast, accessibility, or
   rendering has been checked. All own values are `verified: false`.
-- `sourceRevision` records the repository commit the file was authored on.
+- `sourceRevision` records the base commit the file was authored against.
 
 Radix step values are taken from `@radix-ui/colors` 3.0.0, MIT License, Copyright (c) 2021 Radix.
