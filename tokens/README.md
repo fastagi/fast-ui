@@ -19,4 +19,13 @@ data file only: no package, generator, or platform consumer exists in this repos
   rendering has been checked. All own values are `verified: false`.
 - `sourceRevision` records the base commit the file was authored against.
 
+## Scales (draft)
+
+[`scales.json`](scales.json) holds the full Radix scale library, schema version `0.1.0`: 31 scales
+of 12 steps, each with `light` and `dark` values (sRGB hex), grouped for display, plus a
+bilingual per-step usage note (`stepUsage`) that applies to every scale. Values are copied
+unchanged from `@radix-ui/colors` 3.0.0; no values are edited or invented. Like `palette.json`
+it is data only, and `gray` and `slate` match the steps used by the `neutral` and `slate` themes.
+The alpha and Display P3 variants are not included.
+
 Radix step values are taken from `@radix-ui/colors` 3.0.0, MIT License, Copyright (c) 2021 Radix.
