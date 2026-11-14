@@ -29,3 +29,18 @@ it is data only, and `gray` and `slate` match the steps used by the `neutral` an
 The alpha and Display P3 variants are not included.
 
 Radix step values are taken from `@radix-ui/colors` 3.0.0, MIT License, Copyright (c) 2021 Radix.
+
+## Typography (draft)
+
+[`typography.json`](typography.json) holds the font recommendations and a type scale, schema
+version `0.1.0`. It is data only: no font files are included or bundled here.
+
+- `fonts`: seven open-source fonts, each with its upstream source, a bilingual rationale that
+  states its limits, and a license record. Every entry is licensed under the SIL Open Font
+  License 1.1; the license URL points to the upstream license file, which was fetched and checked
+  for the OFL 1.1 text. Where the upstream file carries a copyright line it is recorded; Noto
+  Sans SC has none recorded here.
+- `roles`: which font to use for UI text, code, display and Chinese accents, with the CSS font
+  stack including system fallbacks. A native app that bundles a font must keep the license text.
+- `scale`: sizes, line heights and tracking. These are `own` proposals, not verified.
+- Whether a font renders correctly in GPUI has not been verified.

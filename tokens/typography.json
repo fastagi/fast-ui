@@ -1,0 +1,363 @@
+{
+  "schemaVersion": "0.1.0",
+  "scaleNote": {
+    "zh-Hans": "字号和行高是我们自己的提案：行高都是 4px 的整数倍，大字号的字距略收紧。没有对照任何参考应用测量，也没有在原生界面里验证。",
+    "en-US": "Sizes and line heights are our own proposal: every line height is a multiple of 4px and large sizes tighten tracking slightly. Not measured against any reference app and not verified in a native UI."
+  },
+  "fonts": [
+    {
+      "id": "inter",
+      "name": "Inter",
+      "role": "ui-sans",
+      "scripts": [
+        "latin"
+      ],
+      "homepage": "https://rsms.me/inter/",
+      "source": "https://github.com/rsms/inter",
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://raw.githubusercontent.com/rsms/inter/master/LICENSE.txt",
+        "verified": true,
+        "copyright": "Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)"
+      },
+      "why": {
+        "zh-Hans": "界面主字体的首选。为屏幕上的小字号阅读而设计，字重和字形齐全，是目前最常见的界面字体之一，换成别的字体时也最容易找到对应的回退。局限：不含中文，需要配合中文字体。",
+        "en-US": "First choice for UI text. It is designed for reading small text on screens, has a wide range of weights, and is one of the most widely used interface fonts, so it is easy to fall back from. Limit: no Chinese glyphs, so pair it with a CJK font."
+      },
+      "bundling": {
+        "allowed": true,
+        "note": {
+          "zh-Hans": "OFL 允许随应用打包和再分发：要附上许可证全文和版权声明，不能把字体单独出售。名字里带“保留字体名”的字体，改造后的版本不能继续用原名。",
+          "en-US": "The OFL allows bundling and redistribution with an app: keep the license text and copyright notice, and do not sell the font by itself. Where a Reserved Font Name applies, modified versions must not reuse that name."
+        }
+      }
+    },
+    {
+      "id": "geist-sans",
+      "name": "Geist Sans",
+      "role": "ui-sans",
+      "scripts": [
+        "latin"
+      ],
+      "homepage": "https://vercel.com/font",
+      "source": "https://github.com/vercel/geist-font",
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://raw.githubusercontent.com/vercel/geist-font/main/OFL.txt",
+        "verified": true,
+        "copyright": "Copyright 2026 The Geist Project Authors (https://github.com/vercel/geist-font)"
+      },
+      "why": {
+        "zh-Hans": "界面字体的备选。几何感更强，更像“工具”而不是“读物”，和 Next.js 站点搭配自然。局限：不含中文；字形比 Inter 更有个性，长段正文读起来略紧。",
+        "en-US": "An alternative for UI text. More geometric, it feels like a tool rather than reading matter, and it sits naturally in Next.js sites. Limits: no Chinese glyphs, and its stronger personality reads slightly tight in long body text."
+      },
+      "bundling": {
+        "allowed": true,
+        "note": {
+          "zh-Hans": "OFL 允许随应用打包和再分发：要附上许可证全文和版权声明，不能把字体单独出售。名字里带“保留字体名”的字体，改造后的版本不能继续用原名。",
+          "en-US": "The OFL allows bundling and redistribution with an app: keep the license text and copyright notice, and do not sell the font by itself. Where a Reserved Font Name applies, modified versions must not reuse that name."
+        }
+      }
+    },
+    {
+      "id": "jetbrains-mono",
+      "name": "JetBrains Mono",
+      "role": "mono",
+      "scripts": [
+        "latin"
+      ],
+      "homepage": "https://www.jetbrains.com/lp/mono/",
+      "source": "https://github.com/JetBrains/JetBrainsMono",
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/OFL.txt",
+        "verified": true,
+        "copyright": "Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)"
+      },
+      "why": {
+        "zh-Hans": "代码和色值的首选等宽字体。为长时间读代码设计，字母辨识度高。我们的站点已经在用。",
+        "en-US": "First choice for code and color values. Designed for reading code for long stretches, with highly distinguishable letters. The site already uses it."
+      },
+      "bundling": {
+        "allowed": true,
+        "note": {
+          "zh-Hans": "OFL 允许随应用打包和再分发：要附上许可证全文和版权声明，不能把字体单独出售。名字里带“保留字体名”的字体，改造后的版本不能继续用原名。",
+          "en-US": "The OFL allows bundling and redistribution with an app: keep the license text and copyright notice, and do not sell the font by itself. Where a Reserved Font Name applies, modified versions must not reuse that name."
+        }
+      }
+    },
+    {
+      "id": "geist-mono",
+      "name": "Geist Mono",
+      "role": "mono",
+      "scripts": [
+        "latin"
+      ],
+      "homepage": "https://vercel.com/font",
+      "source": "https://github.com/vercel/geist-font",
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://raw.githubusercontent.com/vercel/geist-font/main/OFL.txt",
+        "verified": true,
+        "copyright": "Copyright 2026 The Geist Project Authors (https://github.com/vercel/geist-font)"
+      },
+      "why": {
+        "zh-Hans": "等宽字体的备选，和 Geist Sans 成套，两者放在一起观感统一。",
+        "en-US": "An alternative monospace that pairs with Geist Sans so the two look like one family."
+      },
+      "bundling": {
+        "allowed": true,
+        "note": {
+          "zh-Hans": "OFL 允许随应用打包和再分发：要附上许可证全文和版权声明，不能把字体单独出售。名字里带“保留字体名”的字体，改造后的版本不能继续用原名。",
+          "en-US": "The OFL allows bundling and redistribution with an app: keep the license text and copyright notice, and do not sell the font by itself. Where a Reserved Font Name applies, modified versions must not reuse that name."
+        }
+      }
+    },
+    {
+      "id": "schibsted-grotesk",
+      "name": "Schibsted Grotesk",
+      "role": "display",
+      "scripts": [
+        "latin"
+      ],
+      "homepage": "https://fonts.google.com/specimen/Schibsted+Grotesk",
+      "source": "https://github.com/schibsted/schibsted-grotesk",
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://raw.githubusercontent.com/schibsted/schibsted-grotesk/main/OFL.txt",
+        "verified": true,
+        "copyright": "Copyright 2023 The Schibsted-Grotesk Project Authors (https://github.com/schibsted/schibsted-grotesk)"
+      },
+      "why": {
+        "zh-Hans": "大标题用的展示字体，字形有一点个性但不夸张。只用在标题，正文仍用界面字体。我们的站点已经在用。",
+        "en-US": "A display face for large headings, with a little character but not too much. Use it for headings only and keep body text in the UI font. The site already uses it."
+      },
+      "bundling": {
+        "allowed": true,
+        "note": {
+          "zh-Hans": "OFL 允许随应用打包和再分发：要附上许可证全文和版权声明，不能把字体单独出售。名字里带“保留字体名”的字体，改造后的版本不能继续用原名。",
+          "en-US": "The OFL allows bundling and redistribution with an app: keep the license text and copyright notice, and do not sell the font by itself. Where a Reserved Font Name applies, modified versions must not reuse that name."
+        }
+      }
+    },
+    {
+      "id": "noto-sans-sc",
+      "name": "Noto Sans SC",
+      "role": "cjk-sans",
+      "scripts": [
+        "cjk"
+      ],
+      "homepage": "https://fonts.google.com/noto/specimen/Noto+Sans+SC",
+      "source": "https://github.com/notofonts/noto-cjk",
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/LICENSE",
+        "verified": true,
+        "copyright": null
+      },
+      "why": {
+        "zh-Hans": "简体中文界面字体的首选（即思源黑体）。字重多、覆盖广，和 Inter 搭配时粗细比较协调。局限：文件体积大，网页上需要子集化或按需加载。",
+        "en-US": "First choice for Simplified Chinese UI text (the same design as Source Han Sans). Many weights, wide coverage, and its stroke weight pairs well with Inter. Limit: large files, so subset or load on demand on the web."
+      },
+      "bundling": {
+        "allowed": true,
+        "note": {
+          "zh-Hans": "OFL 允许随应用打包和再分发：要附上许可证全文和版权声明，不能把字体单独出售。名字里带“保留字体名”的字体，改造后的版本不能继续用原名。",
+          "en-US": "The OFL allows bundling and redistribution with an app: keep the license text and copyright notice, and do not sell the font by itself. Where a Reserved Font Name applies, modified versions must not reuse that name."
+        }
+      }
+    },
+    {
+      "id": "lxgw-wenkai",
+      "name": "LXGW WenKai",
+      "role": "cjk-display",
+      "scripts": [
+        "cjk"
+      ],
+      "homepage": "https://github.com/lxgw/LxgwWenKai",
+      "source": "https://github.com/lxgw/LxgwWenKai",
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/main/OFL.txt",
+        "verified": true,
+        "copyright": "Copyright 2021-2026 LXGW (https://github.com/lxgw/LxgwWenKai), with Reserved Font Name '霞鹜', '霞鶩', '落霞孤鹜', '落霞孤鶩' and 'LXGW'."
+      },
+      "why": {
+        "zh-Hans": "有个性的中文展示字体（霞鹜文楷），适合标题和引语，不适合界面小字。它基于另一款开源字体改造，许可证里有保留字体名的限制。",
+        "en-US": "A characterful Chinese display font, suited to headings and quotations rather than small UI text. It is derived from another open font, and its license carries Reserved Font Name restrictions."
+      },
+      "bundling": {
+        "allowed": true,
+        "note": {
+          "zh-Hans": "OFL 允许随应用打包和再分发：要附上许可证全文和版权声明，不能把字体单独出售。名字里带“保留字体名”的字体，改造后的版本不能继续用原名。",
+          "en-US": "The OFL allows bundling and redistribution with an app: keep the license text and copyright notice, and do not sell the font by itself. Where a Reserved Font Name applies, modified versions must not reuse that name."
+        }
+      }
+    }
+  ],
+  "roles": [
+    {
+      "id": "ui",
+      "name": {
+        "zh-Hans": "界面正文",
+        "en-US": "UI text"
+      },
+      "pick": "inter",
+      "alternatives": [
+        "geist-sans"
+      ],
+      "cjk": "noto-sans-sc",
+      "stack": [
+        "Inter",
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Noto Sans SC",
+        "sans-serif"
+      ]
+    },
+    {
+      "id": "mono",
+      "name": {
+        "zh-Hans": "代码与色值",
+        "en-US": "Code and values"
+      },
+      "pick": "jetbrains-mono",
+      "alternatives": [
+        "geist-mono"
+      ],
+      "cjk": null,
+      "stack": [
+        "JetBrains Mono",
+        "ui-monospace",
+        "SF Mono",
+        "Menlo",
+        "Consolas",
+        "monospace"
+      ]
+    },
+    {
+      "id": "display",
+      "name": {
+        "zh-Hans": "大标题",
+        "en-US": "Display"
+      },
+      "pick": "schibsted-grotesk",
+      "alternatives": [
+        "inter"
+      ],
+      "cjk": "noto-sans-sc",
+      "stack": [
+        "Schibsted Grotesk",
+        "Inter",
+        "system-ui",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    {
+      "id": "cjk-accent",
+      "name": {
+        "zh-Hans": "中文展示",
+        "en-US": "Chinese accent"
+      },
+      "pick": "lxgw-wenkai",
+      "alternatives": [
+        "noto-sans-sc"
+      ],
+      "cjk": "lxgw-wenkai",
+      "stack": [
+        "LXGW WenKai",
+        "Noto Sans SC",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "serif"
+      ]
+    }
+  ],
+  "scale": [
+    {
+      "id": "xs",
+      "size": 12,
+      "lineHeight": 16,
+      "tracking": 0,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "sm",
+      "size": 13,
+      "lineHeight": 20,
+      "tracking": 0,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "base",
+      "size": 14,
+      "lineHeight": 20,
+      "tracking": 0,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "md",
+      "size": 16,
+      "lineHeight": 24,
+      "tracking": 0,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "lg",
+      "size": 18,
+      "lineHeight": 28,
+      "tracking": 0,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "xl",
+      "size": 20,
+      "lineHeight": 28,
+      "tracking": -0.01,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "2xl",
+      "size": 24,
+      "lineHeight": 32,
+      "tracking": -0.01,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "3xl",
+      "size": 30,
+      "lineHeight": 36,
+      "tracking": -0.02,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "4xl",
+      "size": 36,
+      "lineHeight": 40,
+      "tracking": -0.02,
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "5xl",
+      "size": 48,
+      "lineHeight": 52,
+      "tracking": -0.02,
+      "source": "own",
+      "verified": false
+    }
+  ]
+}
