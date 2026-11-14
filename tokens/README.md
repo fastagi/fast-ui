@@ -44,3 +44,11 @@ version `0.1.0`. It is data only: no font files are included or bundled here.
   stack including system fallbacks. A native app that bundles a font must keep the license text.
 - `scale`: sizes, line heights and tracking. These are `own` proposals, not verified.
 - Whether a font renders correctly in GPUI has not been verified.
+
+## Space, radius and shadow (draft)
+
+[`shape.json`](shape.json) holds the spacing scale (4px base, 12 steps), the corner radius scale
+(8 steps) and five elevation levels with separate light and dark shadows, schema version `0.1.0`.
+It is data only. Every value is `own` and `verified: false`: a proposal that was not measured
+against any reference app and has not been verified in a native UI. Shadows are CSS
+`box-shadow` strings; a native consumer maps them to its own shadow model.

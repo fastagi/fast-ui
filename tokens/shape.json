@@ -1,0 +1,287 @@
+{
+  "schemaVersion": "0.1.0",
+  "notes": {
+    "spacing": {
+      "zh-Hans": "以 4px 为基准的阶梯，编号等于像素数除以 4。每个数值只做一件事，页面里不要用阶梯以外的数值。",
+      "en-US": "A scale on a 4px base; the id is the pixel value divided by 4. Each value has one job, and a page should not use values outside the scale."
+    },
+    "radius": {
+      "zh-Hans": "嵌套时，内层圆角 = 外层圆角 − 两层之间的间距，最小为 0，这样两条弧线看起来是平行的。",
+      "en-US": "When rounded shapes nest, inner radius = outer radius minus the gap between them (never below 0), so the two curves stay parallel."
+    },
+    "elevation": {
+      "zh-Hans": "浅色模式用阴影表现高度。深色模式里阴影几乎看不见，所以加深阴影，同时叠一圈很淡的白色描边来分层。",
+      "en-US": "Light mode shows height with shadow. In dark mode shadows are almost invisible, so shadows get stronger and a faint white ring is added to separate layers."
+    },
+    "status": {
+      "zh-Hans": "所有数值都是我们自己的提案，没有对照任何参考应用测量，也没有在原生界面里验证。",
+      "en-US": "Every value is our own proposal: not measured against any reference app and not verified in a native UI."
+    }
+  },
+  "spacing": [
+    {
+      "id": "0",
+      "px": 0,
+      "use": {
+        "zh-Hans": "无间距。",
+        "en-US": "No space."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "1",
+      "px": 4,
+      "use": {
+        "zh-Hans": "图标和文字之间的缝隙，最紧凑的内边距。",
+        "en-US": "The gap between an icon and its label; the tightest padding."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "2",
+      "px": 8,
+      "use": {
+        "zh-Hans": "同一组元素之间的默认间距，小控件的内边距。",
+        "en-US": "Default gap inside a group of related elements; padding for small controls."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "3",
+      "px": 12,
+      "use": {
+        "zh-Hans": "紧凑列表项、表单标签和输入框之间的距离。",
+        "en-US": "Compact list items and the distance between a form label and its input."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "4",
+      "px": 16,
+      "use": {
+        "zh-Hans": "默认内边距：卡片、对话框、页面两侧的留白。",
+        "en-US": "Default padding for cards and dialogs, and the side gutter of a page."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "5",
+      "px": 20,
+      "use": {
+        "zh-Hans": "较宽松的卡片内边距。",
+        "en-US": "Roomier card padding."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "6",
+      "px": 24,
+      "use": {
+        "zh-Hans": "相邻小节之间的间距。",
+        "en-US": "Space between neighbouring subsections."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "8",
+      "px": 32,
+      "use": {
+        "zh-Hans": "分组之间的间距，大卡片的内边距。",
+        "en-US": "Space between groups; padding for large cards."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "10",
+      "px": 40,
+      "use": {
+        "zh-Hans": "页面里相邻区块的间距。",
+        "en-US": "Space between neighbouring blocks on a page."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "12",
+      "px": 48,
+      "use": {
+        "zh-Hans": "大区块之间的间距。",
+        "en-US": "Space between large blocks."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "16",
+      "px": 64,
+      "use": {
+        "zh-Hans": "页面主要区域之间的间距。",
+        "en-US": "Space between the main regions of a page."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "20",
+      "px": 80,
+      "use": {
+        "zh-Hans": "页面首屏上下留白，营销页的区块间距。",
+        "en-US": "Top and bottom space of a hero; block spacing on marketing pages."
+      },
+      "source": "own",
+      "verified": false
+    }
+  ],
+  "radius": [
+    {
+      "id": "none",
+      "px": 0,
+      "use": {
+        "zh-Hans": "不要圆角：分割线、全宽的条。",
+        "en-US": "No rounding: dividers and full-width bars."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "xs",
+      "px": 2,
+      "use": {
+        "zh-Hans": "极小的元素：复选框、徽标里的点。",
+        "en-US": "Very small elements: checkboxes and dots inside badges."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "sm",
+      "px": 4,
+      "use": {
+        "zh-Hans": "小标签、代码片段。",
+        "en-US": "Small tags and inline code."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "md",
+      "px": 6,
+      "use": {
+        "zh-Hans": "控件的默认圆角：按钮、输入框、下拉框。",
+        "en-US": "Default for controls: buttons, inputs and selects."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "lg",
+      "px": 8,
+      "use": {
+        "zh-Hans": "菜单、提示条、小卡片。",
+        "en-US": "Menus, toasts and small cards."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "xl",
+      "px": 12,
+      "use": {
+        "zh-Hans": "卡片、面板。",
+        "en-US": "Cards and panels."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "2xl",
+      "px": 16,
+      "use": {
+        "zh-Hans": "对话框、大面板、整块区域。",
+        "en-US": "Dialogs, large panels and whole regions."
+      },
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "full",
+      "px": 9999,
+      "use": {
+        "zh-Hans": "胶囊和圆形：标签页的指示条、头像、开关。",
+        "en-US": "Pills and circles: tab indicators, avatars and switches."
+      },
+      "source": "own",
+      "verified": false
+    }
+  ],
+  "elevation": [
+    {
+      "id": "flat",
+      "level": 0,
+      "use": {
+        "zh-Hans": "贴在页面上，不浮起：默认的内容区。",
+        "en-US": "Sits on the page, not raised: the default content area."
+      },
+      "light": "none",
+      "dark": "none",
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "raised",
+      "level": 1,
+      "use": {
+        "zh-Hans": "轻微浮起：卡片、输入框聚焦前的状态。",
+        "en-US": "Slightly raised: cards and resting inputs."
+      },
+      "light": "0 1px 2px rgb(0 0 0 / 0.06)",
+      "dark": "0 1px 2px rgb(0 0 0 / 0.4), inset 0 0 0 1px rgb(255 255 255 / 0.06)",
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "floating",
+      "level": 2,
+      "use": {
+        "zh-Hans": "浮在内容上方：下拉菜单、弹出层。",
+        "en-US": "Floats above content: dropdowns and popovers."
+      },
+      "light": "0 2px 8px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.06)",
+      "dark": "0 2px 8px rgb(0 0 0 / 0.5), inset 0 0 0 1px rgb(255 255 255 / 0.08)",
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "overlay",
+      "level": 3,
+      "use": {
+        "zh-Hans": "盖住页面的一部分：侧边抽屉、命令面板。",
+        "en-US": "Covers part of the page: drawers and command palettes."
+      },
+      "light": "0 8px 24px rgb(0 0 0 / 0.12), 0 2px 6px rgb(0 0 0 / 0.06)",
+      "dark": "0 8px 24px rgb(0 0 0 / 0.6), inset 0 0 0 1px rgb(255 255 255 / 0.1)",
+      "source": "own",
+      "verified": false
+    },
+    {
+      "id": "modal",
+      "level": 4,
+      "use": {
+        "zh-Hans": "最高一层：对话框，需要用户先处理才能继续。",
+        "en-US": "The top layer: dialogs that need an answer before the user can continue."
+      },
+      "light": "0 16px 48px rgb(0 0 0 / 0.18), 0 4px 12px rgb(0 0 0 / 0.08)",
+      "dark": "0 16px 48px rgb(0 0 0 / 0.7), inset 0 0 0 1px rgb(255 255 255 / 0.12)",
+      "source": "own",
+      "verified": false
+    }
+  ]
+}
